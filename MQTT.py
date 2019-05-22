@@ -8,9 +8,9 @@ listaFinale=[None,None,None,None]
 
 
 def on_connect(client, userdata, flags,rc):
-    print('result from connect: {}'.format(mqtt.connack_string(rc)))
+	print('result from connect: {}'.format(mqtt.connack_string(rc)))
 	client.subscribe('calvino-08/temperatura', qos = 0)
-    
+
 
 def on_subscribe(client, userdata, mid, granted_qos):
 	print('subscribed topic with QoS: {}'.format(granted_qos[0]))
